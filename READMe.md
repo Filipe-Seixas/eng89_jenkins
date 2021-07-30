@@ -1,4 +1,4 @@
-# Multi Machine automated deployment
+# Multi-Machine automated deployment
 
 ## Sparta Node Sample App
 
