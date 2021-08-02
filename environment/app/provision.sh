@@ -23,7 +23,7 @@ sudo apt-get install nginx -y
 # remove the old file and add our one
 cd /etc/nginx/sites-available
 sudo rm -rf default
-sudo echo "server{
+echo "server{
         listen 80;
         server_name _;
         location / {
@@ -34,8 +34,7 @@ sudo echo "server{
           proxy_set_header Host $host;
           proxy_cache_bypass $http_upgrade;
         }
-}" >> default
-
+}" | sudo tee default
 
 # finally, restart the nginx service so the new config takes hold
 sudo service nginx restart
